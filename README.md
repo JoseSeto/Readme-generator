@@ -6,7 +6,7 @@
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  [Link to video Walkthrough]https://drive.google.com/file/d/1oCk0PHbBh_9eNHvJpsH5BiW9m3MdJBbE/view?usp=share_link 
+  [Link to video Walkthrough](https://drive.google.com/file/d/1oCk0PHbBh_9eNHvJpsH5BiW9m3MdJBbE/view?usp=share_link)
   
 ---
 ## Contents
