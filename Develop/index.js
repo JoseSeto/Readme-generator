@@ -6,6 +6,8 @@ const util = require("util");
 const generateMarkdown = require("./utils/generateMarkdown");
 const licenseBadge = require("./utils/licenseBadge").licenseBadge;
 
+
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -80,13 +82,19 @@ const questions = [
   ];
   
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    
-}
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // TODO: Create a function to initialize app
-function init() {}
+async function init() {
+    try {
+        const answers = await inquirer.prompt(questions);
+        answers.licenseBadge = licenseBadge(answers.license);
+        let readMeData = generateMarkdown(answers);
+        await writeFileAsync("created-README.md", readMeData);
+      } catch (err) {
+        throw err;
+      }
+}
 
 // Function call to initialize app
 init();
